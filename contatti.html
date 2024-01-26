@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    <title>Contatti</title>
+
+    <style>
+        
+
+        body {
+            font-family: 'HoloLens MDL2 Assets';
+        }
+    </style>
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a> <!--Si crea il logo nel header-->
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarnNav" aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="camere.html">Camere</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                               rol="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Informazioni</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="contatti.html"> Contatti e Dove siamo</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="recensioni.html">Cosa Dicono di noi</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div>
+                        <a href="index.html"><img src="img/logo_kekko.png" width="100" /></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#prenotazioneModal">
+                Prenota
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="prenotazioneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Prenotazione</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- Form per le prenotazioni -->
+                        <form>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="nome" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="dataOra" class="form-label">Data e Ora</label>
+                                    <input type="datetime-local" class="form-control" id="dataOra" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="numero" class="form-label">Numero di telefono</label>
+                                    <input type="tel" class="form-control" id="numero" required>
+                                </div>
+                                <select class="form-select mb-3" id="opzioni" required>
+                                    <option selected disabled value="">Scegli la camera</option>
+                                    <option value="opzione1">Camera Singola</option>
+                                    <option value="opzione2">Camera Doppia</option>
+                                    <option value="opzione3">Camera Familu</option>
+                                </select>
+                                <!-- Aggiungi altri campi del form se necessario -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                                <button type="submit" class="btn btn-primary">Prenota</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!--Form-->
+    <div class="container mt-5" style="background:linear-gradient(rgba(255, 255, 255, 0.5), rgba(207, 226, 255, 0.3)), url(img/hotel_ristorante.jpeg); ">
+        <h1 align="center" style=" color:black;">FACCI SAPERE COME E' ANDATA LA TUA ESPERIENZA ALL'HOTEL KEKKO</h1>
+        <form style="color:black;">
+            <div class="mb-3" style=" font-size:20px;">
+                <label for="nome" class="form-label"><strong>Nome:</strong></label>
+                <input type="text" class="form-control" id="nome" placeholder="inserisci il tuo nome" />
+            </div>
+            <div class="mb-3" style=" font-size:20px;">
+                <label for="email" class="form-label"><strong>Indirizzo Email:</strong> </label>
+                <input type="email" class="form-control" id="email" placeholder="Inserisci Mail" />
+            </div>
+            <div class="mb-3" style=" font-size:20px;">
+                <label for="numero" class="form-label"><strong>Numero di telefono</strong> </label>
+                <input type="tel" class="form-control" placeholder="" /> <!--con il tag textarea creiamo un rettangolo dove l'utente può scrivere senza avere limiti'-->
+            </div>
+            <div class="d-flex justify-content-center" style=" padding:10px;">
+                <button type="submit" class="btn btn-primary ">Invia</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <h2>Dove puoi trovarci</h2>
+                <!-- Inserisci qui il codice di incorporamento della mappa di Google Maps -->
+                <!-- Sostituisci 'CODICE DI INCORPORAMENTO' con il codice fornito da Google Maps -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1398.7327761317556!2d9.207862474441477!3d45.480569004669924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6c19d7f7715%3A0xbb3ebe263f930dc3!2sHotel%20ibis%20Styles%20Milano%20Centro!5e0!3m2!1sit!2sit!4v1706284939487!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Collegamento ai file JavaScript di Bootstrap (popper.js e Bootstrap JS) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!--Contatti-->
+    <div class="container mt-4" id="contatti" align="center">
+        <h2>Contatti</h2>
+        <p>Per ulteriori informazioni sulle nostre camere, contattaci ai seguenti indirizzi:</p>
+        <address>
+            <strong>Hotel Kekko Milano</strong><br />
+            Indirizzo: Via Ruggero Boscovich, 57/59, 20124 Milano MI<br />
+            Telefono: 0123-456789<br />
+            Email: infohotelkekko@gmail.com
+        </address>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+
+
+
+        <div class="container-fluid" style=" background-color: rgba(207,226,255,1);">
+            <!--tasto logo-->
+            <a class="navbar-brand" href="index.html"><img src="img/logo_kekko.png" width="100" alt="logo"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="camere.html">Camere</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarcontatti" role="button" data-bs-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Informazioni  </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarcontatti">
+                            <a class="dropdown-item" href="contatti.html">Chi siamo e Dove trovarci <hr></a>
+                            <a class="dropdown-item" href="recensioni.html"> Cosa dicono di noi <hr></a>
+                        </div>
+
+                </ul>
+                <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#prenotazioneModal">
+                    Prenota
+                </button>
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="prenotazioneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Prenotazione</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <!-- Form per le prenotazioni -->
+                            <form style=" background-image: url(img/hotel_sfondo.jpg);">
+                                <div class="modal-body ">
+                                    <div class="mb-3">
+                                        <label for="nome" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="nome" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="dataOra" class="form-label">Data e Ora</label>
+                                        <input type="datetime-local" class="form-control" id="dataOra" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="numero" class="form-label">Numero di telefono</label>
+                                        <input type="tel" class="form-control" id="numero" required>
+                                    </div>
+                                    <select class="form-select mb-3" id="opzioni" required>
+                                        <option selected disabled value="">Scegli la camera</option>
+                                        <option value="opzione1">Camera Singola</option>
+                                        <option value="opzione2">Camera Doppia</option>
+                                        <option value="opzione3">Camera Familu</option>
+                                    </select>
+                                    <!-- Aggiungi altri campi del form se necessario -->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                                    <button type="submit" class="btn btn-primary">Prenota</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+
+        <address style=" background-color: rgba(207,226,255,1); margin:0px; ">
+            &#127970 Via Ruggero Boscovich, 57/59, 20124 Milano MI <br>
+            Telefono &#9742; 3454456554 <br>
+            Email &#9993 info@kekkohotel.com <br>
+
+        </address>
+    </div>
+
+</body>
+</html>
